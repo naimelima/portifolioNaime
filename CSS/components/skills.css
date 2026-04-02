@@ -1,0 +1,185 @@
+.skills {
+  background-color: var(--light-tertiary-color);
+  scroll-margin-top: 15rem;
+}
+
+.skills .skills__content {
+  padding: 6rem 4rem;
+  text-align: center; /* centraliza tudo */
+}
+
+/* TÍTULO */
+.skills .skills__content .tertiary-title {
+  text-align: center;
+  margin-top: 0rem;
+
+}
+
+/* DESCRIÇÃO */
+.skills .skills__content .description {
+  text-align: center;
+  max-width: 56rem;
+  margin: 0 auto 6rem;
+}
+
+/* GRID */
+.skills .skills__content ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+/* CARD */
+.skills .skills__content ul li {
+  background-color: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
+  cursor: default;
+}
+
+/* HOVER DO CARD */
+.skills .skills__content ul li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* ÍCONE */
+.skills .skills__content ul li .image-container {
+  background-color: var(--light-tertiary-color);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.skills .skills__content ul li .image-container {
+  background: radial-gradient(circle at center, #e3f2f7, #c9dfe9);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* HOVER COM GRADIENTE DINÂMICO */
+.skills .skills__content ul li:hover .image-container {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    #ffffff,
+    #d6ecf5,
+    #b8dce8
+  );
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(129, 176, 204, 0.3);
+}
+
+/* DIFERENCIAÇÃO VISUAL */
+.soft-skills {
+  background: linear-gradient(180deg, #f9fbfc, #eef5f8);
+}
+
+/* ANIMAÇÃO INICIAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* QUANDO APARECE */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* IMAGEM */
+.skills .skills__content ul li .image-container img {
+  width: 3.5rem;
+  transition: all 0.3s ease; 
+}
+
+/* TEXTO */
+.skills .skills__content ul li h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+
+.skills .skills__content ul li p {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.skills-tags-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 6.0rem auto -3.0rem; /* 🔥 controla posição */
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap; /* 🔥 quebra linha automaticamente */
+  gap: 1rem;
+  padding: 4rem 0 6rem;
+  margin-top: -26rem;
+  justify-content: center; /* centraliza */
+}
+
+.skills-tags span {
+  background: var(--primary-color);
+  color: var(--white);
+
+  padding: 0.9rem 1.8rem;
+  border-radius: 2rem; /* 🔥 formato pill (bonito) */
+
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.skills-tags span:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .skills .skills__content ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills .skills__content ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, var(--primary-color), #a1c7cc);
+  }
+  50% {
+    background: linear-gradient(135deg, #9bcad3, var(--primary-color));
+  }
+  100% {
+    background: linear-gradient(135deg, var(--primary-color), #a1c7cc);
+  }
+}
